@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Marksheet</title>
+	<style type="text/css">
+		.main
+		{
+			width: 50%;
+			border: 2px solid;
+			display: flex;
+			flex-wrap: wrap;
+/*			text-align: center;*/
+		}
+		.main h1
+		{
+			width: 100%;
+			text-align: center;
+		}
+		.subject,.marks
+		{
+			width: 50%;
+		}
+		.subject li,.marks li
+		{
+			list-style: none;
+			padding: 10px 0;
+		}
+		p
+		{
+			padding: 0 50px;
+/*			width: 100%;*/
+		}
+		button
+		{
+			display: block;
+			margin-left: 50px;
+/*			float: left;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<h1>Marksheet for Information Technology</h1>
+		<div class="subject"><p>Subject</p>
+			<ul>
+				<li>C Language</li>
+				<li>C++ Language</li>
+				<li>Database</li>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>Javascript</li>
+				<li>php</li>
+			</ul>
+		</div>
+		<div class="marks">
+			<p>Enter Marks</p>
+			<form>
+				<ul>
+					<li><input type="text" id="C" pattern="[0-9]+"></li>
+					<li><input type="text" id="C++" pattern="[0-9]+"></li>
+					<li><input type="text" id="dbms" pattern="[0-9]+"></li>
+					<li><input type="text" id="html" pattern="[0-9]+"></li>
+					<li><input type="text" id="css" pattern="[0-9]+"></li>
+					<li><input type="text" id="js" pattern="[0-9]+"></li>
+					<li><input type="text" id="php" pattern="[0-9]+"></li>
+					<li><input type="submit" value="Result" onclick="return GetMarks()"></li>
+				</ul>
+			</form>
+		</div>
+		<p>Total is: <span id="total"></span> /350</p>
+		<p>Percentage is: <span id="percent"></span>%</p>
+	</div>
+
+
+
+
+
+
+	<script>
+		marks1 = document.getElementById('C');
+		marks2 = document.getElementById('C++');
+		marks3 = document.getElementById('dbms');
+		marks4 = document.getElementById('html');
+		marks5 = document.getElementById('css');
+		marks6 = document.getElementById('js');
+		marks7 = document.getElementById('php');
+
+		console.log(marks1);
+
+		total = document.getElementById('total');
+		percentage = document.getElementById('percent');
+
+		function GetMarks()
+		{
+			total.innerHTML = parseInt(marks1.value) + parseInt(marks2.value) + parseInt(marks3.value) + parseInt(marks4.value) + parseInt(marks5.value) + parseInt(marks6.value) + parseInt(marks7.value);
+
+			percentage.innerHTML = (total.innerHTML * 100)/350;
+			return false;
+		}
+	</script>
+</body>
+</html>

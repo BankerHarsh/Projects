@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="https://stimg.cardekho.com/images/car-images/large/Tata/Harrier/9850/1681887806112/front-left-side-47.jpg" alt="" height="650px" width="100%" class="i">
+    <img src="https://d1egxr9rlacnzd.cloudfront.net/unsafe/https://s3.ap-south-1.amazonaws.com/carinfo.cdn/cars/tata/harrier/tata-harrier-xm/dc7d497a-2c52-4903-96c2-66bddd9d4c9d.jpg" alt="" height="650px" width="100%" class="i">
+    <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/142739/harrier-exterior-right-front-three-quarter-2.jpeg" alt="" height="650px" width="100%" class="i">
+    <img src="https://imgd-ct.aeplcdn.com/1280x720/n/cw/ec/139245/harrier-facelift-right-front-three-quarter-2.jpeg" alt="" height="650px" width="100%" class="i">
+
+    <script>
+        index=0;
+       function slider()
+       {
+            images = document.getElementsByClassName('i');
+            console.log(images)
+
+            for( i=0;i<images.length;i++)
+            {
+             images[i].style.display = "none";
+            }
+
+            console.log(i);//4
+
+            images[index].style.display = "block";
+            index++;//
+
+            if(index==4)
+            {
+                index=0;
+            }
+
+            setTimeout("slider()",1000)
+       }
+
+       slider();
+
+    </script>
+    
+</body>
+</html>

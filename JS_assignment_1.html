@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Show Password</title>
+</head>
+<body>
+	Enter Password: <input type="password" name="" id="inp">
+	<input type="checkbox" name="" id="chk" onclick="ShowPassword()"> Show Password
+
+
+
+
+
+
+	<script>
+		input_tag = document.getElementById('inp');
+		checkbox_tag = document.getElementById('chk');
+
+		function ShowPassword()
+		{
+			if(checkbox_tag.checked == true)
+			{
+				input_tag.type = "text";
+			}
+			else
+			{
+				input_tag.type = "password";
+			}
+		}
+	</script> 
+</body>
+</html>
